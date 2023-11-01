@@ -37,7 +37,11 @@ function determineWord () {
 }
 
 function updateDisplay (randomWord) {
-    
+    let splitWord = randomWord.split()
+    const span = document.createElement("span")
+    for (let i = 0; i < splitWord.length; i++){
+        document.getElementById("letter-bank").appendChild(span)
+    }
 }
 //start game 
 // create funciton for starting the game 
