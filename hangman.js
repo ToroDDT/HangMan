@@ -32,7 +32,8 @@ function determineWord () {
         wordFive: "peace"
     }
  let wordList = Object.values(words);
- 
+ let randomWord = wordList[(Math.floor(Math.random() * wordList.length))]
+
 
 }
 
