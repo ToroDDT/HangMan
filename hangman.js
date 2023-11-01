@@ -19,22 +19,23 @@
 // display letter in specified div 
 // remove letter from list of letters in the alphabet div 
 
-let words = {
-   
-    wordOne: "love",
-    wordTwo: "people",
-    wordThree: "power",
-    wordFour: "python",
-    wordFive: "peace"
+
+
+
+
+function determineWord () {
+    let words = {
+        wordOne: "love",
+        wordTwo: "people",
+        wordThree: "power",
+        wordFour: "python",
+        wordFive: "peace"
+    }
+ let wordList = Object.values(words);
+ 
 
 }
 
-alert()
-
-// start game 
-// ask player with a prompt "are you ready"
-// store answer in varaible called 
-// if yes 
 //start game 
 // create funciton for starting the game 
 // create game state 
