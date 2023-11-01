@@ -22,6 +22,7 @@ let DOM = {
     button : document.getElementById("button")
 }
 
+button.addEventListener("click", storeUserInput)
 
 function storeUserInput () {
     let letterList = [] 
