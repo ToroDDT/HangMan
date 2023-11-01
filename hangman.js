@@ -43,6 +43,22 @@ function updateDisplay (randomWord) {
         document.getElementById("letter-bank").appendChild(span)
     }
 }
+
+// how will we get input from user 
+// create input box 
+// create button 
+// create event listener for button clicked
+// create function that takes value from text box 
+// store value from text box in userChoice variable 
+
+// determine if user choice is correct 
+// create a text box for user to input letter
+//select textbox by id and store in a varaible 
+// get value from textbox and store in a varaiable 
+// take userChoice 
+// loop through each character in split word and compare with userChoice 
+// if splitWord[i] == userChoice 
+// display letter at 
 //start game 
 // create funciton for starting the game 
 // create game state 
