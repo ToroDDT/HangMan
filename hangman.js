@@ -18,8 +18,18 @@
 // if player letter matches a letter from word 
 // display letter in specified div 
 // remove letter from list of letters in the alphabet div 
+let DOM = {
+    button : document.getElementById("button")
+}
 
 
+function storeUserInput () {
+    let letterList = [] 
+    let input = document.getElementById("user-answer");
+    let userAnswer = input.value
+    input.push(userAnswer)
+    return letterList
+}
 
 
 
