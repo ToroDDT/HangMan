@@ -31,12 +31,14 @@ function determineWord () {
         wordFour: "python",
         wordFive: "peace"
     }
- let wordList = Object.values(words);
- let randomWord = wordList[(Math.floor(Math.random() * wordList.length))]
-
-
+    let wordList = Object.values(words);
+    let randomWord = wordList[(Math.floor(Math.random() * wordList.length))]
+    updateDisplay(randomWord)
 }
 
+function updateDisplay (randomWord) {
+    
+}
 //start game 
 // create funciton for starting the game 
 // create game state 
