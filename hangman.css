@@ -1,0 +1,21 @@
+body {
+    background-color: lightskyblue;
+}
+h1 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+h2 {
+    color: white;
+    font-weight: 900;
+    border: 4px solid white;
+    justify-content: center;
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    font-size: 3rem;
+    border-radius: 1%;
+}
