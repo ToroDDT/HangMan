@@ -1,5 +1,9 @@
 body {
     background-color: lightskyblue;
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    
 }
 h1 {
     color: white;
@@ -18,4 +22,36 @@ h2 {
     align-items: center;
     font-size: 3rem;
     border-radius: 1%;
+}
+
+#alphabet {
+    display: flex;
+    border: 2px solid white;
+    height: 20vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1%;
+    justify-content: center;
+
+}
+
+.letter {
+    border: 1px solid white;
+    display: flex;
+    height: 20%;
+    width: 10%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: powderblue;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+}
+#start-restart {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
 }

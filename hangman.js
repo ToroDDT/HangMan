@@ -37,7 +37,7 @@ function determineWord () {
     updateDisplay(randomWord)
 }
 
-function getAllIndexes () {
+function getAllIndexes (arr, val) {
     let index = [], i = -1;
     while((i = arr.indexOf(val, i = 1)) != -1){
         index.push(i)
@@ -46,15 +46,14 @@ function getAllIndexes () {
 }
 
 function determineLetterMatches () {
-    // first determine userInput array
-    for (let i = 0; i < randomWord.length; i++){
-        if(randomWord[i] == letterList.toString()){
-                
+    for (let i = 0; i <randomWord.length; i++){
+        if (randomWord[i] == letterChosen.toString()){
+            addLetter()
+        }
+        else {
+            remove()
         }
     }
-    // compare userInput array with splitWord variable array
-    // if an index mathces 
-    // append string to a specified index in div element 
 }
 
 function updateDisplay (randomWord) {
@@ -65,7 +64,7 @@ function updateDisplay (randomWord) {
     }
 }
 
-function 
+function createAlphabetlist () 
 
 // how will we get input from user 
 // create input box 
@@ -104,3 +103,14 @@ function
 
 // 
 
+let indexesOfAllElement = getAllIndexes(randomWord, letterChosen()) 
+for (let i = 0; i < randomWord.length; i++){
+    if(randomWord[i] == letterChosen.toString()){
+         for (i = 0; i < indexesOfAllElement.length; i++) {
+
+            break;   
+         }
+          
+    }
+} 
+    return {indexesOfAllElement}
