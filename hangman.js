@@ -1,9 +1,3 @@
-
-
-
-
-
-
 let DOM = {
     button : document.getElementById("button")
 }
@@ -19,9 +13,8 @@ function storeUserInput () {
     let userAnswer = input.value
     letterList.push(userAnswer)
     letterChosen.push(userAnswer)
-    return letterList
+    return {letterList, letterChosen}
 }
-
 
 
 function determineWord () {
@@ -34,7 +27,8 @@ function determineWord () {
     }
     let wordList = Object.values(words);
     let randomWord = wordList[(Math.floor(Math.random() * wordList.length))]
-    updateDisplay(randomWord)
+    let randomWordArray = randomWord.split("")
+    updateDisplay(randomWordArray)
 }
 
 function getAllIndexes (arr, val) {
@@ -66,42 +60,12 @@ function updateDisplay (randomWord) {
 
 function createAlphabetlist () 
 
-// how will we get input from user 
-// create input box 
-// create button 
-// create event listener for button clicked
-// create function that takes value from text box 
-// store value from text box in userChoice variable 
 
-// determine if user choice is correct 
-// create a text box for user to input letter
-//select textbox by id and store in a varaible 
-// get value from textbox and store in a varaiable 
-// take userChoice 
-// loop through each character in split word and compare with userChoice 
-// if splitWord[i] == userChoice 
-// display letter at 
-//start game 
-// create funciton for starting the game 
-// create game state 
-// convert object of words into a array of strings 
-// store new array of strings into a variable called list of words 
-// choose a string in the array at random 
-// store string chosen in variable called wordChosen
-// return wordChosen 
-// call function 
+function addLettertoDisplay () {
 
-//within a container 
-// create a function named determine amount of spaces for each letter of the word chosoen 
-// split word into an array of letters 
-// store array of characters into a variable called characterArr
-// determine length of character array 
-// store value of the length in characterlength
-// return characterLength 
-//
+}
 
 
-// 
 
 let indexesOfAllElement = getAllIndexes(randomWord, letterChosen()) 
 for (let i = 0; i < randomWord.length; i++){
