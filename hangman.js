@@ -1,34 +1,24 @@
-// build a hangman Game 
-// what are the different aspects of the hangman game 
-// 
 
 
 
-// the Hangman game is about guessing a word 
-// player guesses each letter of the word 
-// if the player guesses wrong draw a part of body
-//
 
-// create a list of words 
-// create a variable 
-// assign an object containing strings of phrases 
 
-// inputs: ask player with a prompt 
-// create variable to store answer from player 
-// if player letter matches a letter from word 
-// display letter in specified div 
-// remove letter from list of letters in the alphabet div 
+
 let DOM = {
     button : document.getElementById("button")
 }
+
+
 
 button.addEventListener("click", storeUserInput)
 
 function storeUserInput () {
     let letterList = [] 
+    let letterChosen = []
     let input = document.getElementById("user-answer");
     let userAnswer = input.value
-    input.push(userAnswer)
+    letterList.push(userAnswer)
+    letterChosen.push(userAnswer)
     return letterList
 }
 
@@ -47,6 +37,26 @@ function determineWord () {
     updateDisplay(randomWord)
 }
 
+function getAllIndexes () {
+    let index = [], i = -1;
+    while((i = arr.indexOf(val, i = 1)) != -1){
+        index.push(i)
+    }
+    return index
+}
+
+function determineLetterMatches () {
+    // first determine userInput array
+    for (let i = 0; i < randomWord.length; i++){
+        if(randomWord[i] == letterList.toString()){
+                
+        }
+    }
+    // compare userInput array with splitWord variable array
+    // if an index mathces 
+    // append string to a specified index in div element 
+}
+
 function updateDisplay (randomWord) {
     let splitWord = randomWord.split()
     const span = document.createElement("span")
@@ -54,6 +64,8 @@ function updateDisplay (randomWord) {
         document.getElementById("letter-bank").appendChild(span)
     }
 }
+
+function 
 
 // how will we get input from user 
 // create input box 
