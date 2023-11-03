@@ -50,10 +50,10 @@ function determineLetterMatches () {
     }
 }
 
-function updateDisplay (randomWord) {
-    let splitWord = randomWord.split()
+function updateDisplay (randomWordArray) {
+
     const span = document.createElement("span")
-    for (let i = 0; i < splitWord.length; i++){
+    for (let i = 0; i < randomWordArray.length; i++){
         document.getElementById("letter-bank").appendChild(span)
     }
 }
