@@ -61,12 +61,15 @@ function updateDisplay (randomWordArray) {
     }
 }
 
-function createAlphabetlist () 
-
 
 function addLettertoDisplay () {
-        
+    for (let i = 0; i < indexes.length; i++) {
+        DOM.letterBank.children[i].innerHTML = letterChosen.toString()
+ }
+
 }
+
+
 
 
 
