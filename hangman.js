@@ -1,11 +1,12 @@
 let DOM = {
     button : document.getElementById("button"),
-    letterBank : document.getElementById("letter-bank")
+    letterBank : document.getElementById("letter-bank"),
+    alphabet : document.getElementById("alphabet")
 }
 
 
 
-button.addEventListener("click", storeUserInput)
+DOM.button.addEventListener("click", storeUserInput)
 
 function storeUserInput () {
     let letterList = [] 
@@ -78,5 +79,6 @@ for (let i = 0; i < randomWord.length; i++){
          }
           
     }
-} 
     return {indexesOfAllElement}
+} 
+    
