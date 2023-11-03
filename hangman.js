@@ -69,7 +69,14 @@ function addLettertoDisplay () {
 
 }
 
-
+function removeLetter () {
+    let alphabetChildren = DOM.alphabet.children
+    for (let i = 0; i < alphabetChildren.length; i++ ){
+        if(alphabetChildren[i].text == letterChosen){
+            alphabetChildren[i].style.backgroundColor = "red"
+        }
+    }
+}
 
 
 
