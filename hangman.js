@@ -1,11 +1,16 @@
 let DOM = {
     button : document.getElementById("button"),
     letterBank : document.getElementById("letter-bank"),
-    alphabet : document.getElementById("alphabet")
+    alphabet : document.getElementById("alphabet"),
+    start : document.getElementById("start"),
+    restart : document.getElementById("restart")
 }
 
 
-
+DOM.start.addEventListener("click", () =>{
+    determineWord()
+    
+})
 DOM.button.addEventListener("click", storeUserInput)
 
 function storeUserInput () {
@@ -15,6 +20,8 @@ function storeUserInput () {
     let userAnswer = input.value
     letterList.push(userAnswer)
     letterChosen.push(userAnswer)
+    console.log(letterChosen)
+    determineLetterMatches()
     return {letterList, letterChosen}
 }
 
@@ -25,12 +32,17 @@ function determineWord () {
         wordTwo: "people",
         wordThree: "power",
         wordFour: "python",
-        wordFive: "peace"
+        wordFive: "peace",
+        wordSix: "the",
+        wordSeven: "war",
+        wordEight: "russia"
     }
     let wordList = Object.values(words);
     let randomWord = wordList[(Math.floor(Math.random() * wordList.length))]
     let randomWordArray = randomWord.split("")
+    console.log(randomWord)
     updateDisplay(randomWordArray)
+    return {randomWordArray}
 }
 
 function getAllIndexes (arr, val) {
@@ -54,16 +66,20 @@ function determineLetterMatches () {
 }
 
 function updateDisplay (randomWordArray) {
-
+    let A = randomWordArray
+    console.log(A)
+   
+    for (let i = 0; i < A.length; i++){
     const span = document.createElement("span")
-    for (let i = 0; i < randomWordArray.length; i++){
-        document.getElementById("letter-bank").appendChild(span)
+     DOM.letterBank.appendChild(span)
     }
+     
 }
 
 
 function addLettertoDisplay () {
-    for (let i = 0; i < indexes.length; i++) {
+    let indexesOfAllElement = getAllIndexes(randomWordArray, letterChosen()) 
+    for (let i = 0; i < indexesOfAllElement.length; i++) {
         DOM.letterBank.children[i].innerHTML = letterChosen.toString()
  }
 
@@ -80,15 +96,6 @@ function removeLetter () {
 
 
 
-let indexesOfAllElement = getAllIndexes(randomWord, letterChosen()) 
-for (let i = 0; i < randomWord.length; i++){
-    if(randomWord[i] == letterChosen.toString()){
-         for (i = 0; i < indexesOfAllElement.length; i++) {
 
-            break;   
-         }
-          
-    }
-    return {indexesOfAllElement}
-} 
+
     
