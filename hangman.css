@@ -55,3 +55,28 @@ label {
     justify-content: center;
     margin-top: 1%;
 }
+
+#letter-bank {
+    border: 2px solid white;
+    height: 10vh;
+    display: flex;
+    gap: 1%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+span {
+    height: 50%;
+    width: 10%;
+    border: 1px solid black ;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border-top: none;
+    border-left:  none;
+    border-right: none;
+    font-size: 2rem;
+    font-weight: 900;
+}
