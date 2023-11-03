@@ -1,5 +1,6 @@
 let DOM = {
-    button : document.getElementById("button")
+    button : document.getElementById("button"),
+    letterBank : document.getElementById("letter-bank")
 }
 
 
@@ -40,9 +41,10 @@ function getAllIndexes (arr, val) {
 }
 
 function determineLetterMatches () {
-    for (let i = 0; i <randomWord.length; i++){
-        if (randomWord[i] == letterChosen.toString()){
-            addLetter()
+    for (let i = 0; i <randomWordArray.length; i++){
+        if (randomWordArray[i] == letterChosen.toString()){
+            addLettertoDisplay()
+            remove()
         }
         else {
             remove()
@@ -62,7 +64,7 @@ function createAlphabetlist ()
 
 
 function addLettertoDisplay () {
-
+        
 }
 
 
