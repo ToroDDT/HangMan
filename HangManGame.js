@@ -64,7 +64,7 @@ function compareLetters () {
                 
                 addletter()
             } else {
-                removeItem()
+                amountLeft = decrement()
             }
         }
         removeItem()
@@ -101,4 +101,11 @@ function removeItem () {
         }
     }
     
+}
+
+function decrement () {
+    let counter = 7
+    return function decrementCounter () {
+        DOM.guesses.innerHTML = counter--
+    }
 }
