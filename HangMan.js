@@ -79,3 +79,10 @@ function addletter () {
         }
         
     }
+
+    function decrement () {
+        let counter = 7
+        return function decrementCounter () {
+            DOM.guesses.innerHTML = counter--
+        }
+    }
