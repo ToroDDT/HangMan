@@ -4,7 +4,8 @@ const DOM = {
     alphabet : document.getElementById("alphabet"),
     start : document.getElementById("start"),
     restart : document.getElementById("restart"),
-    input: document.getElementById("user-answer")
+    input: document.getElementById("user-answer"),
+    guesses: document.getElementById("amount")
 }
 
 let randomWordArray = [];
