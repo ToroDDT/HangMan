@@ -12,7 +12,7 @@ let randomWordArray = [];
 let letterList = [] 
 let letterChosen = []
 
-DOM.start.addEventListener("click", () =>{
+DOM.start.addEventListener("click", () => { 
     updateDisplay()
 })
 

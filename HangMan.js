@@ -11,9 +11,18 @@ let randomWordArray = [];
 let letterList = [] 
 let letterChosen = []
 
-DOM.start.addEventListener("click", () =>{
+DOM.start.addEventListener("click", () => {
     updateDisplay()
 })
+
+function updateDisplay () {
+    const {randomWordArray} = createWord()
+    for (let i = 0; i < randomWordArray.length; i++){
+        const span = document.createElement("span")
+         DOM.letterBank.appendChild(span)
+    }
+}
+
 
 DOM.button.addEventListener("click", storeUserInput)
 
