@@ -57,3 +57,16 @@ function addletter () {
         }
         console.log(letterChosen)
     }
+
+    function removeItem () {
+        let string = letterChosen.toString()
+        let upperCaseWord = string.toUpperCase()
+        console.log(upperCaseWord)
+        let alphabetChildren = DOM.alphabet.children
+        for (let i = 0; i < alphabetChildren.length; i++ ){
+            if(alphabetChildren[i].textContent == upperCaseWord){
+                alphabetChildren[i].style.backgroundColor = "red"
+            }
+        }
+        
+    }
