@@ -69,7 +69,7 @@ label {
 span {
     height: 50%;
     width: 10%;
-    border: 1px solid black ;
+    border: 5px solid black ;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -79,4 +79,8 @@ span {
     border-right: none;
     font-size: 2rem;
     font-weight: 900;
+}
+
+#amount {
+    margin-left: 1%;
 }

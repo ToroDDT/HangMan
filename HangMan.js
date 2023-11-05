@@ -6,3 +6,7 @@ const DOM = {
     restart : document.getElementById("restart"),
     input: document.getElementById("user-answer")
 }
+
+let randomWordArray = [];
+let letterList = [] 
+let letterChosen = []
