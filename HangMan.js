@@ -40,10 +40,20 @@ function compareLetters () {
         removeItem()
     }
 
-    function getAllIndexes(arr, val) {
+function getAllIndexes(arr, val) {
         var indexes = [], i = -1;
         while ((i = arr.indexOf(val, i+1)) != -1){
             indexes.push(i);
         }
         return indexes;
+    }
+
+function addletter () {
+        let indexesOfAllElement = getAllIndexes(randomWordArray, letterChosen.toString()) 
+        console.log(indexesOfAllElement)
+        for (let i = 0; i < indexesOfAllElement.length; i++){
+            let x = indexesOfAllElement[i]
+            DOM.letterBank.children[x].innerHTML = letterChosen.toString()
+        }
+        console.log(letterChosen)
     }
