@@ -26,3 +26,16 @@ function storeUserInput () {
     
     compareLetters()
 }
+
+function compareLetters () {
+    for (let i = 0; i < randomWordArray.length; i++){
+            if (randomWordArray[i] == letterChosen.toString()){
+                console.log("works")
+                
+                addletter()
+            } else {
+                removeItem()
+            }
+        }
+        removeItem()
+    }
