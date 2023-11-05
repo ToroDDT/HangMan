@@ -26,6 +26,26 @@ function updateDisplay () {
 
 DOM.button.addEventListener("click", storeUserInput)
 
+function createWord () {
+    let words = {
+        wordOne: "love",
+        wordTwo: "people",
+        wordThree: "power",
+        wordFour: "python",
+        wordFive: "peace",
+        wordSix: "the",
+        wordSeven: "war",
+        wordEight: "russia"
+    }
+    let wordList = Object.values(words);
+    let randomWord = wordList[(Math.floor(Math.random() * wordList.length))]
+    randomWordArray = randomWord.split("")
+    console.log(randomWordArray)
+  
+    return {randomWordArray}
+    
+}
+
 function storeUserInput () {
     letterChosen = [];
     let userAnswer = DOM.input.value;
