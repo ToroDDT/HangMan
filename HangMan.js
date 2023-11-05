@@ -16,3 +16,13 @@ DOM.start.addEventListener("click", () =>{
 })
 
 DOM.button.addEventListener("click", storeUserInput)
+
+function storeUserInput () {
+    letterChosen = [];
+    let userAnswer = DOM.input.value;
+    letterList.push(userAnswer);
+    letterChosen.push(userAnswer);
+    console.log(letterChosen)
+    
+    compareLetters()
+}
