@@ -10,3 +10,9 @@ const DOM = {
 let randomWordArray = [];
 let letterList = [] 
 let letterChosen = []
+
+DOM.start.addEventListener("click", () =>{
+    updateDisplay()
+})
+
+DOM.button.addEventListener("click", storeUserInput)
