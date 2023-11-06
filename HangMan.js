@@ -63,7 +63,7 @@ function compareLetters () {
                 
                 addletter()
             } else {
-                removeItem()
+               amount = decrement()
             }
         }
         removeItem()
