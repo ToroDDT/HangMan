@@ -24,6 +24,9 @@ DOM.restart.addEventListener("click", () => {
     for (let i = 0; i < DOM.alphabet.children.length; i++){
         DOM.alphabet.children[i].style.backgroundColor = "powderblue"
     }
+    while (DOM.letterBank.lastChild){
+        DOM.letterBank.removeChild(DOM.letterBank.lastChild)
+    }
 })
 
 DOM.start.addEventListener("click", () => {
@@ -66,6 +69,7 @@ function storeUserInput () {
     let userAnswer = DOM.input.value;
     letterList.push(userAnswer);
     letterChosen.push(userAnswer);
+    DOM.input.value = ""
     
     
     compareLetters()
@@ -95,7 +99,7 @@ function addletter () {
             let x = indexesOfAllElement[i]
             DOM.letterBank.children[x].innerHTML = letterChosen.toString()
         }
-        console.log(letterChosen)
+        determineOutcomeofGame()
     }
 
     function removeItem () {
@@ -108,7 +112,7 @@ function addletter () {
                 alphabetChildren[i].style.backgroundColor = "red"
             }
         }
-        determineOutcomeofGame()
+        
     }
 
 function decrement () {
