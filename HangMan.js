@@ -5,7 +5,8 @@ const DOM = {
     start : document.getElementById("start"),
     restart : document.getElementById("restart"),
     input: document.getElementById("user-answer"),
-    guesses : document.getElementById("amount")
+    guesses : document.getElementById("amount"),
+    restart : document.getElementById("restart")
 
 }
 
@@ -13,6 +14,8 @@ let randomWordArray = [];
 let letterList = [] 
 let letterChosen = []
 let counter = 7;
+
+
 
 DOM.start.addEventListener("click", () => {
     updateDisplay()
@@ -96,9 +99,26 @@ function addletter () {
                 alphabetChildren[i].style.backgroundColor = "red"
             }
         }
+        determineOutcomeofGame()
     }
 
 function decrement () {
     counter--
     DOM.guesses.innerHTML = counter
 }
+
+function determineOutcomeofGame () {
+  if (counter == 0){
+    alert("you lost")
+  }
+  if (randomWordArray.toString() == letterList.toString()){
+    alert("you won")
+  }
+}
+
+
+// how do we determine outCome of game 
+// if the amount of guess is equal to zero 
+// alert you lost 
+// all letters match random word 
+// you won 
