@@ -20,6 +20,7 @@ DOM.restart.addEventListener("click", () => {
     letterList = [];
     letterChosen = []
     counter = 7
+    DOM.guesses.innerHTML = 7
     for (let i = 0; i < DOM.alphabet.children.length; i++){
         DOM.alphabet.children[i].style.backgroundColor = "powderblue"
     }
@@ -123,10 +124,3 @@ function determineOutcomeofGame () {
     alert("you won")
   }
 }
-
-
-// how do we determine outCome of game 
-// if the amount of guess is equal to zero 
-// alert you lost 
-// all letters match random word 
-// you won 
