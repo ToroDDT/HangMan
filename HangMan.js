@@ -15,7 +15,15 @@ let letterList = []
 let letterChosen = []
 let counter = 7;
 
-
+DOM.restart.addEventListener("click", () => {
+    randomWordArray = [];
+    letterList = [];
+    letterChosen = []
+    counter = 7
+    for (let i = 0; i < DOM.alphabet.children.length; i++){
+        DOM.alphabet.children[i].style.backgroundColor = "powderblue"
+    }
+})
 
 DOM.start.addEventListener("click", () => {
     updateDisplay()
