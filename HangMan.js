@@ -4,12 +4,15 @@ const DOM = {
     alphabet : document.getElementById("alphabet"),
     start : document.getElementById("start"),
     restart : document.getElementById("restart"),
-    input: document.getElementById("user-answer")
+    input: document.getElementById("user-answer"),
+    guesses : document.getElementById("amount")
+
 }
 
 let randomWordArray = [];
 let letterList = [] 
 let letterChosen = []
+let counter = 7;
 
 DOM.start.addEventListener("click", () => {
     updateDisplay()
@@ -51,24 +54,20 @@ function storeUserInput () {
     let userAnswer = DOM.input.value;
     letterList.push(userAnswer);
     letterChosen.push(userAnswer);
-    console.log(letterChosen)
+    
     
     compareLetters()
 }
 
 function compareLetters () {
-    for (let i = 0; i < randomWordArray.length; i++){
-            if (randomWordArray[i] == letterChosen.toString()){
-                console.log("works")
-                
-                addletter()
-            } else {
-               amount = decrement()
-            }
-        }
-        removeItem()
-    }
-
+  const testMatch = (element) => element == letterChosen.toString();
+  if(randomWordArray.some(testMatch)){
+        addletter()
+  } else {
+    decrement()
+  }
+  removeItem()
+}
 function getAllIndexes(arr, val) {
         var indexes = [], i = -1;
         while ((i = arr.indexOf(val, i+1)) != -1){
@@ -97,12 +96,9 @@ function addletter () {
                 alphabetChildren[i].style.backgroundColor = "red"
             }
         }
-        
     }
 
-    function decrement () {
-        let counter = 7
-        return function decrementCounter () {
-            DOM.guesses.innerHTML = counter--
-        }
-    }
+function decrement () {
+    counter--
+    DOM.guesses.innerHTML = counter
+}
